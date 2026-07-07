@@ -2,7 +2,7 @@
 
 **Turn a one-off data collection into a file that re-runs itself.** You describe what to collect once. You get back a structured markdown document that carries its own instructions to reproduce the same collection next week, next month, or next quarter.
 
-![[_assets/ookbook.png]]
+![Ookbook](_assets/ookbook.png)
 
 ---
 
@@ -28,9 +28,9 @@ Claude in Chrome is the reference implementation named throughout, but nothing h
 ## For example
 (Using Claude Desktop on Mac OS)
 
-1. Paste the kickoff prompt and the template file into an AI chat window  ![[_assets/scr01.png]]
-2. It will ask you questions about the data you want to collect and how you want it processed![[_assets/scr02.png]]
-3. After processing (Claude desktop may open a browser window to collect the data), it will give you a markdown file you can save to your desktop ![[_assets/scr03.png]]
+1. Paste the kickoff prompt and the template file into an AI chat window  ![Paste kickoff prompt and template file](_assets/scr01.png)
+2. It will ask you questions about the data you want to collect and how you want it processed!![Answer questions](_assets/scr02.png)
+3. After processing (Claude desktop may open a browser window to collect the data), it will give you a markdown file you can save to your desktop ![Download Ookbook](_assets/scr03.png)
 ---
 
 ## How re-run works
@@ -40,7 +40,7 @@ Give the saved file back to your agent with a short instruction:
 Follow the instructions in the attached file to update the data
 ```
 
-![[_assets/scr04.png]]
+![Update Ookbook](_assets/scr04.png)
 
 ---
 
