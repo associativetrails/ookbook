@@ -25,6 +25,56 @@ Claude in Chrome is the reference implementation named throughout, but nothing h
 
 ---
 
+## Skip the copy-paste: install the skill 
+
+Ookbook is included as an agent skill in [`skill/ookbook`](skill/ookbook). The skill contains the reusable workflow plus the markdown template in [`skill/ookbook/references/template.md`](skill/ookbook/references/template.md).
+
+### Codex
+
+Codex can use skills from repo-level or user-level skill folders.
+
+For this repository only, copy the skill into the repo skill directory:
+
+```
+mkdir -p .agents/skills
+cp -r skill/ookbook .agents/skills/ookbook
+```
+
+For your personal Codex setup across repositories, copy it into your user skills directory:
+
+```
+mkdir -p ~/.agents/skills
+cp -r skill/ookbook ~/.agents/skills/ookbook
+```
+
+Restart Codex if the skill does not appear immediately. Once installed, invoke it explicitly with `$ookbook`, or just use the trigger word in a prompt:
+
+- `turn this into an ookbook`
+- `make an ookbook tracking [whatever]`
+- `update this ookbook`
+
+### Claude
+
+If you use Claude, you can install Ookbook as a [skill](https://support.claude.com/en/articles/12512176-what-are-skills) so the kickoff prompt and template are always available — no pasting required.
+
+**Claude.ai / Claude desktop:** zip the [`skill/ookbook`](skill/ookbook) folder and upload it under **Settings → Features → Skills** (requires a paid plan with code execution enabled).
+
+**Claude Code:** copy the folder into your skills directory:
+
+```
+cp -r skill/ookbook ~/.claude/skills/ookbook
+```
+
+Once installed, the word "ookbook" does all the work:
+
+- **After any collection you liked** — say `turn this into an ookbook` and the conversation gets reverse-engineered into a re-runnable file, including the exclusion decisions that were made along the way.
+- **Starting fresh** — say `make an ookbook tracking [whatever]` and it runs the interview and collection in one go.
+- **Updating** — attach a saved ookbook and say `update this ookbook`.
+
+Using another agent without skill support? [`convert-prompt.md`](convert-prompt.md) does the same "turn this into an ookbook" conversion as a paste-in prompt.
+
+---
+
 ## For example
 (Using Claude Desktop on Mac OS)
 
